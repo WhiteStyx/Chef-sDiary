@@ -23,5 +23,10 @@ public class CircularChecker : MonoBehaviour
         {
             spun = true;
         }
+
+        if(spun)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

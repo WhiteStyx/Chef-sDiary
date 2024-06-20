@@ -8,6 +8,7 @@ public class Exit : MonoBehaviour
     public GameObject objectToOpen;
     public GameObject dialOn;
     public GameObject dialOff;
+    public GameObject game;
 
     public void closeButton()
     {
@@ -34,5 +35,10 @@ public class Exit : MonoBehaviour
         objectToOpen.SetActive(false);
         dialOn.SetActive(false);
         dialOff.SetActive(true);
+    }
+
+    public void hot()
+    {
+        game.SetActive(true);
     }
 }
