@@ -8,7 +8,20 @@ public class Exit : MonoBehaviour
     public GameObject objectToOpen;
     public GameObject dialOn;
     public GameObject dialOff;
-    public GameObject game;
+    public GameObject game, finishedProduct, paste;
+    [SerializeField] GameObject panGame;
+    bool finished,blendable;
+
+    void Start()
+    {
+        finished = false;
+    }
+
+    void Update()
+    {
+        StirDrop stirDrop = panGame.GetComponent<StirDrop>();
+        finished = stirDrop.finished;
+    }
 
     public void closeButton()
     {
@@ -40,5 +53,28 @@ public class Exit : MonoBehaviour
     public void hot()
     {
         game.SetActive(true);
+    }
+
+    public void closeRecipe()
+    {
+        objectToClose.SetActive(false);
+        objectToOpen.SetActive(true);
+    }
+
+    public void closeSeasoning()
+    {
+        objectToClose.SetActive(false);
+        objectToOpen.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void closeStir()
+    {
+        if(finished)
+        {
+            objectToClose.SetActive(false);
+            objectToOpen.SetActive(true);
+            finishedProduct.SetActive(true);
+        }
     }
 }

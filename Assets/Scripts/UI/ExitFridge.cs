@@ -13,4 +13,5 @@ public class ExitFridge : MonoBehaviour
         open.SetActive(true);
         gameObject.SetActive(false);
     }
+    
 }

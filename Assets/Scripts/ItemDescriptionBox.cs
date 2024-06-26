@@ -1,44 +1,44 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 
-public class ItemDescriptionBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemDescriptionBox : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject descbox;
     public IngredientSO ingredient;
     public TMP_Text ingredientName;
     public TMP_Text ingredientDescription;
-    public SpriteRenderer ingredientImage;
-    public UnityEngine.UI.Image image;
+    public Image image;
     public int ingredientID;
     public GameObject cookingBoard;
+    Transform parentAfterDrag;
+    public bool cut;
 
     void Start()
     {
         descbox.SetActive(false);
         ingredientID = ingredient.id;
+        image.sprite = ingredient.image;
+        cut = ingredient.cut;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    void Update()
     {
-        // descbox.SetActive(true);
-        ingredientName.text = ingredient.name;
-        ingredientDescription.text = ingredient.description;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        descbox.SetActive(false);
+        if(cut)
+        {
+            image.sprite = ingredient.imageCut;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
+        parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
@@ -54,7 +54,7 @@ public class ItemDescriptionBox : MonoBehaviour, IPointerEnterHandler, IPointerE
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("End Drag");
-        
+        transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
         cookingBoard.SetActive(false);
     }

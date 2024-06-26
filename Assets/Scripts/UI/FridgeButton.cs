@@ -10,7 +10,8 @@ public class FridgeButton : MonoBehaviour
     public void OpenFridge()
     {
         fridge.SetActive(true);
-        gameObject.SetActive(false);
         exit.SetActive(true);
+        gameObject.SetActive(false);
+        
     }
 }
