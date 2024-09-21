@@ -17,10 +17,12 @@ public class ItemDescriptionBox : MonoBehaviour, IBeginDragHandler, IDragHandler
     public int ingredientID;
     public GameObject cookingBoard;
     Transform parentAfterDrag;
+    [SerializeField] private MouseFollower mouseFollower;
     public bool cut;
 
     void Start()
     {
+        mouseFollower.Toggle(false);
         descbox.SetActive(false);
         ingredientID = ingredient.id;
         image.sprite = ingredient.image;
@@ -43,6 +45,8 @@ public class ItemDescriptionBox : MonoBehaviour, IBeginDragHandler, IDragHandler
         transform.SetAsLastSibling();
         image.raycastTarget = false;
         cookingBoard.SetActive(true);
+        mouseFollower.Toggle(true);
+        mouseFollower.SetData(image.sprite);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -57,5 +61,11 @@ public class ItemDescriptionBox : MonoBehaviour, IBeginDragHandler, IDragHandler
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
         cookingBoard.SetActive(false);
+        mouseFollower.Toggle(false);
+    }
+
+    public void SetData(Sprite sprite)
+    {
+
     }
 }

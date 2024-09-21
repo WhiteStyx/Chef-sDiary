@@ -15,6 +15,7 @@ public class SpiceItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public int ingredientID;
     public GameObject cookingBoard;
     Transform parentAfterDrag;
+    [SerializeField] private MouseFollower mouseFollower;
     public bool cut;
 
     void Start()
@@ -39,18 +40,25 @@ public class SpiceItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        mouseFollower.Toggle(true);
+        mouseFollower.SetData(image.sprite);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("Dragging");
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End Drag");
+        mouseFollower.Toggle(false);
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        cookingBoard.SetActive(false);
+    }
+
+    public void SetData(Sprite sprite)
+    {
+        image.sprite = sprite;
     }
 }

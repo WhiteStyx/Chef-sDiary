@@ -73,27 +73,6 @@ public class StirDrop : MonoBehaviour, IDropHandler
         }
         if(step2)//masukin bumbu, bakso, ayam
         {
-            // Debug.Log("enter step 2");
-            // switch(id)
-            // {
-            //     case 10:
-            //         Debug.Log("10");
-            //         paste = true;
-            //         break;
-                
-            //     case 9:
-            //         Debug.Log("9");
-            //         cutchicken = true;
-            //         break;
-
-            //     case 11:
-            //         Debug.Log("11");
-            //         meatball = true;
-            //         break;
-            //     default:
-            //         Debug.Log("fucked");
-            //         break;
-            // }
             if(id == 10) paste = true;
             if(id == 9) cutchicken = true;
             if(id == 11) meatball = true;
@@ -101,32 +80,6 @@ public class StirDrop : MonoBehaviour, IDropHandler
 
         if(step3)//rice, salt, powder, pepper, oyster, kecapmanis
         {
-            // switch(id)
-            // {
-            //     case 17:
-            //         rice = true;
-            //         break;
-                
-            //     case 12:
-            //         salt = true;
-            //         break;
-                
-            //     case 13:
-            //         powder = true;
-            //         break;
-
-            //     case 14:
-            //         pepper = true;
-            //         break;
-                
-            //     case 15:
-            //         oyster = true;
-            //         break;
-                
-            //     case 16:
-            //         kecapmanis = true;
-            //         break;
-            // }
             if(id == 17) rice = true;
             if(id == 12) salt = true;
             if(id == 13) powder = true;
