@@ -20,7 +20,7 @@ This project is done using Unity 2022.3.21f1
 
 ## Installation Guide:
 
-Itch.io:
+Itch.io: https://whitestyx.itch.io/chefs-diary
 1. Download the Chef's Diary file from the download page
 2. Provide sufficient storage and make sure your device meets the minimum requirements of the game
 3. The file will be directed automatically into the default download space designated on your device
