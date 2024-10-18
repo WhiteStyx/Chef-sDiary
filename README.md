@@ -7,6 +7,17 @@ Hello! Thank you for downloading our game :D
 Chef's Diary is a cooking simulator game where you learn how to cook Indonesian cuisines from the recipes in the game. One of the many recipes available in Indonesia is Nasi Goreng Tek-Tek.
 In this game we attempt to simulate how to cook the dish with the aid of our friend!
 
+## 📋 Project Info
+This project is done using Unity 2022.3.21f1
+
+| **Role** | **Name** | 
+|:-|:-|
+| Game Designer & Sound | Vincent Pho Wijaya |
+| Game Designer | Raphael Krisandi |
+| Game Designer | Evan Derian Rustam |
+| Game Artist | Ariq Bimo Nurputro |
+| Game Programmer| Luas Adil Kurniawan |
+
 ## Installation Guide:
 
 Itch.io:
@@ -14,7 +25,7 @@ Itch.io:
 2. Provide sufficient storage and make sure your device meets the minimum requirements of the game
 3. The file will be directed automatically into the default download space designated on your device
 4. Unzip the file on the place you wish to place the game on
-5. Run the Nightwalkers.exe file
+5. Run the .exe file
 6. If your device security shows up pop up notification, choose run anyway/run
 
 ## Support and Contact:
