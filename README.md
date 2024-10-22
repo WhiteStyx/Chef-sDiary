@@ -32,13 +32,7 @@ This project is done using Unity 2022.3.21f1
 | `Spice.cs`  | Manages the item interaction |
 | `etc`  | |
 
-## 🕹️Game controls
-The following controls are bound in-game, for gameplay and testing.
 
-| Key Binding       | Function          |
-| ----------------- | ----------------- |
-| Left Click        | Interact          |
-| Left Click Hold   | Drag              |
 
 <br>
 
@@ -59,6 +53,14 @@ The following controls are bound in-game, for gameplay and testing.
       
 ```
 <br>
+
+## 🕹️Game controls
+The following controls are bound in-game, for gameplay and testing.
+
+| Key Binding       | Function          |
+| ----------------- | ----------------- |
+| Left Click        | Interact          |
+| Left Click Hold   | Drag              |
 
 ## Installation Guide:
 
