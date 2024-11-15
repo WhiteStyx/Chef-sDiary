@@ -19,10 +19,6 @@ This project is done using Unity 2022.3.21f1
 | Game Programmer| Luas Adil Kurniawan |
 
 ##  📜Scripts and Features
-
-- In this game, we need to clear the stage before certain turn.
-- in some Nodes there is some obstacle that need to clear with playing minigames.
-
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | Laser.cs | Manages Laser for Light minigames |
